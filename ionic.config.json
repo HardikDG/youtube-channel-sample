@@ -1,0 +1,7 @@
+{
+  "name": "youtube_sample",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

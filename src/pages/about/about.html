@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-content padding>
+        <ion-grid>
+            <ion-row>
+              <ion-col *ngFor="let playlist of playlists" (click)="playlistClicked(playlist)" col-4>
+                <img [src]="playlist.snippet.thumbnails.default.url"> 
+                <p> {{ playlist.snippet.title }} </p>
+                <p> {{ playlist.contentDetails.itemCount }} Videos</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <!-- <button full ion-button (click)="loadMoreVideos()">Load more</button> -->
+    </ion-content>
+</ion-content>

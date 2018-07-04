@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col *ngFor="let video of videoList" (click)="videoClicked(video)" col-4>
+            <img [src]="video.snippet.thumbnails.default.url"> 
+            <p> {{ video.snippet.title }} </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button full ion-button (click)="loadMoreVideos()">Load more</button>
+</ion-content>
